@@ -1,0 +1,32 @@
+---
+interface Props {
+  class?: string
+}
+const {class: customClass} = Astro.props
+---
+<h2 class={`text-transparent bg-clip-padding inline-block ${customClass}`}>
+  <slot/>
+</h2>
+
+<style>
+  h2{
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+    -webkit-background-clip: text;
+    background-clip: padding-box;
+    text-fill-color: transparent;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s infinite;
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+</style>

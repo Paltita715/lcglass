@@ -1,0 +1,66 @@
+---
+import GlassButton from "./GlassButton.astro";
+import HeroSlider from "./HeroSlider";
+---
+
+<section class="relative w-full h-dvh">
+  <HeroSlider client:load />
+  <div class="absolute inset-0 bg-black/70"></div>
+  <article class="absolute inset-0 flex flex-col justify-center items-center text-white z-10">
+    <div class="max-w-screen-sm text-center mt-20 p-6 rounded-lg">
+      <div class="bg-white/5 rounded-sm backdrop-blur-sm">
+        <h2 class="text-7xl font-bold uppercase font-oswald slide-fade">
+          Tu <span class="">aliado</span> en soluciones de <span class="xd text-shimmer">vidrio</span> de calidad
+        </h2>
+        <p class="text-lg text-primary-50 font-medium text-shadow">
+          Calidad, innovación y compromiso en cada proyecto.
+        </p>
+      </div>
+      <GlassButton anchor href="/contacto" class="mx-auto mt-8 py-2 px-4 uppercase text-xl bounce-left">
+        Contactanos ➡
+      </GlassButton>
+    </div>
+  </article>
+</section>
+
+<style>
+  @keyframes slideFade {
+    0% {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-fade {
+    animation: slideFade 1s ease forwards;
+  }
+  .xd{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: padding-box;
+    text-fill-color: transparent;
+  }
+  .text-shimmer {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s infinite;
+}
+  @keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+</style>

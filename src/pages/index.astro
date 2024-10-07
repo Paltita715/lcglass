@@ -1,8 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import PorQueElegirnos from '../components/PorQueElegirnos.astro'
+import HeroSection from '../components/HeroSection.astro'
+import NuestrosProyectos from "../components/NuestrosProyectos.astro"
+import NuestrosServicios from "../components/NuestrosServicios.astro"
+import UltimosClientes from '../components/UltimosClientes.astro'
 ---
 
 <Layout title="Inicio">
-	
+  <h1 class="sr-only">Vidrios y soluciones de calidad para tus proyectos - LC Glass y Soluciones</h1>
+  <main>
+    <HeroSection/>
+    <PorQueElegirnos/>
+    <NuestrosServicios/>
+    <NuestrosProyectos/>
+    <UltimosClientes/>
+  </main>
 </Layout>

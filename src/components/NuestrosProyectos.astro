@@ -1,0 +1,20 @@
+---
+import GlassTitle from "./GlassTitle.astro";
+import ProyectsSlider from "../components/ProyectsSlider"
+import GlassButton from "./GlassButton.astro";
+---
+
+<section class="flex flex-row bg-primary h-[40rem]">
+  <article class="basis-1/2 py-10 px-20 text-center flex flex-col justify-center gap-12">
+    <GlassTitle class="uppercase text-7xl font-bold font-oswald">
+      Nuestros Proyectos
+    </GlassTitle>
+    <p class="text-xl leading-relaxed text-white">
+      Descubre cómo hemos transformado espacios con nuestras soluciones en vidrio y cristalería arquitectónica. Desde fachadas innovadoras hasta interiores personalizados, cada proyecto es una muestra de nuestra calidad y compromiso.
+    </p>
+    <GlassButton anchor href="/proyectos" class="uppercase text-xl px-4 py-2 mx-auto">
+      Mira todos<br>nuestros proyectos
+    </GlassButton>
+  </article>
+  <ProyectsSlider client:visible/>
+</section>
