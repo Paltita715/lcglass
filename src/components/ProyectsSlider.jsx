@@ -1,6 +1,30 @@
-import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide"
+import { useEffect, useState } from "react"
 
 const ProyectsSlider = () => {
+  const [SplideComponents, setSplideComponents] = useState(null)
+
+  useEffect(() => {
+    import("@splidejs/react-splide").then((module) => {
+      setSplideComponents({
+        Splide: module.Splide,
+        SplideTrack: module.SplideTrack,
+        SplideSlide: module.SplideSlide,
+      })
+    })
+  }, [])
+
+  if (!SplideComponents) {
+    return (
+      <img
+        src="/proy01.jpeg"
+        alt="Imagen estática de carga"
+        className="lg:basis-1/2 w-full h-[30rem] lg:h-full object-cover"
+      />
+    )
+  }
+
+  const { Splide, SplideTrack, SplideSlide } = SplideComponents
+
   return (
     <Splide
       hasTrack={false}
