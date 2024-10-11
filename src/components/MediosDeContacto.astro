@@ -1,0 +1,157 @@
+---
+const isContactPage = Astro.url.pathname === "/contactanos"
+---
+
+<section
+  class={`max-w-screen-xl mx-auto px-4 lg:px-8 py-16 grid lg:grid-cols-2 gap-10 ${isContactPage && "hidden"}`}
+>
+  <div class="max-lg:text-center">
+    <h2
+      class="gradient-text font-oswald text-5xl max-lg:uppercase lg:text-7xl font-bold bg-gradient-to-tl from-primary to-accent bg-clip-text pb-3 mb-4"
+    >
+      ¿Listo para llevar tu proyecto al siguiente nivel?
+    </h2>
+    <p
+      class="font-medium text-pretty text-xl text-primary-900 leading-relaxed max-w-screen-sm mx-auto"
+    >
+      Contáctanos hoy mismo para recibir
+      <strong class="text-accent">asesoría personalizada</strong>
+      y conocer cómo nuestras
+      <strong class="text-accent"> soluciones en vidrio y aluminio </strong>
+      pueden transformar tus espacios.
+    </p>
+  </div>
+  <div
+    class="flex flex-col bg-primary text-white rounded-3xl py-4 px-6 text-lg max-lg:gap-4 justify-between"
+  >
+    <article class="flex flex-col sm:flex-row justify-between items-center">
+      <h3>Visite nuestra pagina de contacto</h3>
+      <a
+        href="/contactanos"
+        class="px-4 py-2 bg-white/10 border hover:translate-y-1 transition-transform text-center"
+      >
+        <svg
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="inline-block"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z"
+          ></path><path d="M10 16h6"></path><path
+            d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M4 8h3"
+          ></path><path d="M4 12h3"></path><path d="M4 16h3"></path></svg
+        >
+        Contactanos</a
+      >
+    </article>
+    <article class="flex flex-col sm:flex-row items-center justify-between">
+      <h3>Realize sus consultas a traves de WhatsApp</h3>
+      <a
+        href=""
+        class="px-4 py-2 bg-white/10 border hover:translate-y-1 transition-transform text-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="inline-block mx-auto"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path><path
+            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+          ></path></svg
+        >
+        Chatear
+      </a>
+    </article>
+    <article class="">
+      <div class="flex flex-row gap-4 justify-center">
+        <div class="text-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="mx-auto"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+            ></path></svg
+          >
+          <span class="font-light">
+            Lima, Villa el Salvador <br /> Asoc. California II Etapa <br /> Mz H1
+            Lote 14
+          </span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-center">Nuestras Redes sociales</span>
+          <div class="flex justify-center gap-8 items-center flex-1">
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="52"
+                height="52"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="bg-white/20 rounded-xl border"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z"
+                ></path></svg
+              >
+            </a>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="52"
+                height="52"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="bg-white/20 rounded-xl border"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                ></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+                ></path><path d="M16.5 7.5l0 .01"></path></svg
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-fit mt-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="inline-block"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"
+          ></path><path
+            d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
+          ></path></svg
+        >
+        lcglass@lcglassysoluciones.com
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .gradient-text {
+    -webkit-text-fill-color: transparent;
+  }
+</style>

@@ -1,21 +1,23 @@
 ---
-type AnchorProps = { anchor: true; href: string; class?: string };
-type ButtonProps = { anchor?: false; href?: undefined; class?: string };
+type AnchorProps = { anchor: true; href: string; class?: string }
+type ButtonProps = { anchor?: false; href?: undefined; class?: string }
 
-type Props = AnchorProps | ButtonProps;
+type Props = AnchorProps | ButtonProps
 
-const { anchor, href, class: customClass } = Astro.props as Props;
+const { anchor, href, class: customClass } = Astro.props as Props
 ---
 
-{anchor ? (
-  <a href={href} class={`glass-button ${customClass}`}>
-    <slot />
-  </a>
-) : (
-  <button class={`glass-button ${customClass}`}>
-    <slot />
-  </button>
-)}
+{
+  anchor ? (
+    <a href={href} class={`glass-button ${customClass}`}>
+      <slot />
+    </a>
+  ) : (
+    <button class={`glass-button ${customClass}`}>
+      <slot />
+    </button>
+  )
+}
 
 <style>
   .glass-button {
@@ -23,7 +25,9 @@ const { anchor, href, class: customClass } = Astro.props as Props;
     width: fit-content;
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid white;
-    transition: transform 200ms ease, background-color 200ms ease;
+    transition:
+      transform 200ms ease,
+      background-color 200ms ease;
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -49,5 +53,46 @@ const { anchor, href, class: customClass } = Astro.props as Props;
   .glass-button:hover::before {
     left: 90%;
   }
-  .bounce-left{animation:bounce-left .9s linear both} @keyframes bounce-left{0%{transform:translateX(-48px);animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{transform:translateX(-26px);animation-timing-function:ease-in}65%{transform:translateX(-13px);animation-timing-function:ease-in}82%{transform:translateX(-6.5px);animation-timing-function:ease-in}93%{transform:translateX(-4px);animation-timing-function:ease-in}25%,55%,75%,87%,98%{transform:translateX(0);animation-timing-function:ease-out}100%{transform:translateX(0);animation-timing-function:ease-out;opacity:1}}
+  .bounce-left {
+    animation: bounce-left 0.9s linear both;
+  }
+  @keyframes bounce-left {
+    0% {
+      transform: translateX(-48px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(-26px);
+      animation-timing-function: ease-in;
+    }
+    65% {
+      transform: translateX(-13px);
+      animation-timing-function: ease-in;
+    }
+    82% {
+      transform: translateX(-6.5px);
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateX(-4px);
+      animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
 </style>

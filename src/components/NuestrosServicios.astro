@@ -1,7 +1,7 @@
 ---
-import GlassButton from "./GlassButton.astro";
-import GlassCard from "./GlassCard.astro";
-import GlassTitle from "./GlassTitle.astro";
+import GlassButton from "./GlassButton.astro"
+import GlassCard from "./GlassCard.astro"
+import GlassTitle from "./GlassTitle.astro"
 const services = [
   {
     title: "Fachadas y Cristalería Arquitectónica",
@@ -9,8 +9,8 @@ const services = [
     list: [
       "Revestimiento de fachadas y muros cortina",
       "Instalación de cristales laminados, curvos y blindados",
-      "Puertas y ventanas de cristal templado"
-    ]
+      "Puertas y ventanas de cristal templado",
+    ],
   },
   {
     title: "Soluciones de Cristal para Interiores",
@@ -18,8 +18,8 @@ const services = [
     list: [
       "Espejos decorativos biselados",
       "Tableros de vidrio para mesa",
-      "Divisiones de ambiente con diversos modelos"
-    ]
+      "Divisiones de ambiente con diversos modelos",
+    ],
   },
   {
     title: "Soluciones Residenciales y Comerciales",
@@ -27,8 +27,8 @@ const services = [
     list: [
       "Ventanas y mamparas acústicas de PVC y aluminio",
       "Cortinas roller, persianas y pisos laminados",
-      "Techos de policarbonato"
-    ]
+      "Techos de policarbonato",
+    ],
   },
   {
     title: "Construcción Especializada y Carpintería",
@@ -36,28 +36,37 @@ const services = [
     list: [
       "Barandas y pasamanos de acero inoxidable y cristal templado",
       "Escaleras de cristal templado y carpintería especializada",
-      "Trabajos en drywall"
-    ]
-  }
-];
+      "Trabajos en drywall",
+    ],
+  },
+]
 ---
 
 <section class="w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 text-center">
-    <GlassTitle class="font-oswald text-7xl uppercase font-bold">
-    Nuestros Servicios
+    <GlassTitle class="font-oswald text-5xl lg:text-7xl uppercase font-bold">
+      Nuestros Servicios
     </GlassTitle>
     <p class="text-lg mt-4 max-w-screen-sm mx-auto text-white">
-      Ofrecemos soluciones innovadoras y de calidad en vidrio, aluminio y otros materiales, adaptándonos a las necesidades de cada cliente y proyecto.
+      Ofrecemos soluciones innovadoras y de calidad en vidrio, aluminio y otros
+      materiales, adaptándonos a las necesidades de cada cliente y proyecto.
     </p>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {
-        services.map(service => (
-          <GlassCard title={service.title} img={service.img} list={service.list} />
+        services.map((service) => (
+          <GlassCard
+            title={service.title}
+            img={service.img}
+            list={service.list}
+          />
         ))
       }
     </div>
-    <GlassButton anchor href="/servicios" class="mx-auto mt-8 px-8 py-4 text-xl">
+    <GlassButton
+      anchor
+      href="/servicios"
+      class="mx-auto mt-8 px-8 py-4 text-xl"
+    >
       Ver todos los servicios
     </GlassButton>
   </div>
@@ -65,6 +74,6 @@ const services = [
 
 <style>
   section {
-    background-image: linear-gradient(120deg, #0754A4 0%, #D93033 100%);
+    background-image: linear-gradient(120deg, #0754a4 0%, #d93033 100%);
   }
 </style>

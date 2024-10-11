@@ -1,61 +1,96 @@
+---
+const page = Astro.url.pathname
+---
+
 <header class="w-full fixed shadow-md top-0 px-4 z-50">
-  <div class="flex flex-col md:flex-row relative justify-between max-w-screen-xl mx-auto md:items-center">
-    <a href="/" class="h-24 flex items-center gap-2 w-fit hover:text-primary group transition-colors duration-500">
-      <img src="/lcglass-logo-2.png" alt="logo de lc glass y soluciones" class="h-16 aspect-[5/4] drop-shadow-2xl">
-      <span class="font-oswald font-bold text-3xl uppercase">glass y<br><strong class="text-accent">soluciones</strong></span>
-    </a>
-    <input type='checkbox' class='peer hidden' id='navbar-open' />
-    <label
-      class='absolute right-0 top-8 cursor-pointer md:hidden'
-      for='navbar-open'
+  <div
+    class="flex flex-col md:flex-row relative justify-between max-w-screen-xl mx-auto md:items-center"
+  >
+    <a
+      href="/"
+      class="h-24 flex items-center gap-2 w-fit hover:text-primary group transition-colors duration-500"
     >
-      <span class='sr-only'>boton de menú</span>
+      <img
+        src="/lcglass-logo-2.png"
+        alt="logo de lc glass y soluciones"
+        class="h-16 aspect-[5/4] drop-shadow-2xl"
+      />
+      <span class="font-oswald font-bold text-3xl uppercase"
+        >glass y<br /><strong class="text-accent">soluciones</strong></span
+      >
+    </a>
+    <input type="checkbox" class="peer hidden" id="navbar-open" />
+    <label
+      class="absolute right-0 top-8 cursor-pointer md:hidden"
+      for="navbar-open"
+    >
+      <span class="sr-only">boton de menú</span>
       <svg
-        xmlns='http://www.w3.org/2000/svg'
-        class='h-6 w-6'
-        fill='none'
-        viewBox='0 0 24 24'
-        stroke='currentColor'
-        stroke-width='2'
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
       >
         <path
-          stroke-linecap='round'
-          stroke-linejoin='round'
-          d='M4 6h16M4 12h16M4 18h16'></path>
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </label>
-    <nav class='md:mt-0 peer-checked:max-h-60 flex max-h-0 flex-col overflow-hidden md:max-h-full md:flex-row md:items-start transition-all duration-300'>
+    <nav
+      class="md:mt-0 peer-checked:max-h-60 flex max-h-0 flex-col overflow-hidden md:max-h-full md:flex-row md:items-start transition-all duration-300"
+    >
       <ul class="flex flex-col md:flex-row items-center md:h-24 font-semibold">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/servicios">Servicios</a></li>
-        <li><a href="/nosotros">Nosotros</a></li>
-        <li><a href="/proyectos">Proyectos</a></li>
-        <li><a class="bg-primary text-white hover:bg-secondary no-line active" href="/contacto">Contacto</a></li>
+        <li><a class={page === "/" ? "active" : ""} href="/">Inicio</a></li>
+        <li>
+          <a class={page === "/servicios" ? "active" : ""} href="/servicios"
+            >Servicios</a
+          >
+        </li>
+        <li>
+          <a class={page === "/nosotros" ? "active" : ""} href="/nosotros"
+            >Nosotros</a
+          >
+        </li>
+        <!-- <li>
+          <a class={page === "/proyectos" ? "active" : ""} href="/proyectos"
+            >Proyectos</a>
+        </li> -->
+        <li>
+          <a
+            class="bg-primary text-white hover:bg-secondary no-line"
+            href="/contactanos">Contactanos</a
+          >
+        </li>
       </ul>
     </nav>
   </div>
 </header>
 
 <style>
-  li{
-    @apply h-full w-full
+  li {
+    @apply h-full w-full;
   }
-  li a{
-    @apply block text-center h-full px-4 py-3 content-center transition-colors duration-300
+  li a {
+    @apply block text-center h-full px-4 py-3 content-center transition-colors duration-300;
   }
   nav ul li a {
     position: relative;
   }
   nav ul li a::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: .3rem;
-    background-color: #D93033;
-    opacity: 0; 
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    height: 0.3rem;
+    background-color: #d93033;
+    opacity: 0;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
     transform: translateY(2px);
   }
   nav ul li a:hover::after {
@@ -69,7 +104,7 @@
   nav ul li a.no-line::after {
     display: none;
   }
-  header{
+  header {
     background-color: rgb(255, 255, 255);
     animation: fadeHeader auto linear both;
     animation-timeline: scroll(root block);
@@ -82,7 +117,7 @@
     }
     to {
       background-color: rgb(255, 255, 255, 0.65);
-      backdrop-filter: blur(5px);
+      /* backdrop-filter: blur(5px); */
     }
   }
 </style>

@@ -1,0 +1,224 @@
+---
+import GlassButton from "../components/GlassButton.astro"
+import GlassTitle from "../components/GlassTitle.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Nosotros">
+  <main class="flex flex-col pt-36 pb-20 mb-10 px-4">
+    <section
+      class="max-w-screen-xl px-4 xl:px-14 mx-auto flex lg:flex-row flex-col gap-8"
+    >
+      <img
+        style="clip-path: inset(0 0 0 0 round 20% 0% 20% 0%);"
+        class="w-[30rem] mx-auto max-lg:order-last"
+        src="/nosotros/img01.jpeg"
+        alt=""
+      />
+      <div class="text-white p-4 content-center">
+        <GlassTitle
+          class="font-oswald font-bold text-5xl md:text-6xl uppercase mb-6"
+          >Sobre LC Glass</GlassTitle
+        >
+        <p class="font-semibold md:text-lg leading-relaxed mb-4">
+          LC Glass y Soluciones SAC se especializa en el diseño e implementación
+          de estructuras con vidrios y cristales de alta calidad. Desde ventanas
+          y mamparas hasta barandas y fachadas, ofrecemos soluciones innovadoras
+          y garantizadas para satisfacer las necesidades de nuestros clientes.
+        </p>
+        <GlassButton anchor href="/servicios" class="px-4 py-2 text-xl"
+          >Conoce nuestros servicios</GlassButton
+        >
+      </div>
+    </section>
+    <hr class="border-2 my-10 border-white/30 rounded-3xl" />
+    <section class="max-w-screen-xl mx-auto text-white/90">
+      <h2
+        class="text-white uppercase font-oswald font-bold md:text-6xl text-5xl"
+      >
+        somos expertos en lo que hacemos
+      </h2>
+      <hr class="w-32 mt-2 mb-8 border-4 border-accent rounded-3xl" />
+      <p class="mb-8 text-lg">
+        LC Glass y Soluciones SAC se dedica a ofrecer servicios integrales de
+        diseño y construcción, utilizando materiales de la más alta calidad como
+        cristales templados, espejos y perfiles de aluminio. Trabajamos en
+        proyectos de diversa magnitud, desde viviendas hasta edificaciones
+        comerciales.
+      </p>
+      <p class="mb-8 text-lg">
+        Nos esforzamos por superar las expectativas de nuestros clientes,
+        asegurando responsabilidad, puntualidad y excelencia en cada uno de
+        nuestros trabajos. Nuestra experiencia nos permite brindar soluciones
+        duraderas y estéticas, adaptadas a las necesidades de cada cliente.
+      </p>
+    </section>
+  </main>
+  <section class="flex md:flex-row flex-col max-w-screen-lg gap-4 mx-auto px-4">
+    <div class="basis-1/2 content-center max-md:px-6 max-md:order-last">
+      <img src="/quienes-somos.jpeg" alt="" class="rounded-xl" />
+    </div>
+    <div class="basis-1/2 p-8">
+      <article class="mb-14">
+        <h2 class="text-accent font-oswald font-bold text-5xl">Mision</h2>
+        <hr class="border-accent rounded-3xl border-2 w-10 mt-4 mb-8" />
+        <p class="text-lg font-medium text-primary-900">
+          Brindar servicios de calidad y garantía a nuestros clientes,
+          satisfaciendo sus necesidades y superando sus expectativas con
+          soluciones innovadoras y estandarizadas en el mercado de estructuras
+          de vidrio.
+        </p>
+      </article>
+      <article>
+        <h2 class="text-accent font-oswald font-bold text-5xl">Vision</h2>
+        <hr class="border-accent rounded-3xl border-2 w-10 mt-4 mb-8" />
+        <p class="text-lg font-medium text-primary-900">
+          Ser un proveedor reconocido en el mercado local y nacional, aplicando
+          principios de innovación y estandarización para liderar en la
+          industria de estructuras de vidrio y construcción.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section
+    class="flex flex-col xl:flex-row max-w-screen-xl p-10 mx-auto gap-16"
+  >
+    <div class="xl:max-w-[28rem]">
+      <h2 class="font-oswald font-bold text-5xl uppercase text-accent">
+        Nuestros valores definen quienes somos
+      </h2>
+      <hr class="border-accent rounded-3xl border-2 w-16 mt-4 mb-8" />
+      <p class="text-lg font-medium text-primary-900">
+        En LC Glass y Soluciones SAC, valoramos la responsabilidad, integridad y
+        excelencia. Atendemos desde grandes empresas hasta pequeños
+        emprendedores, garantizando puntualidad y un compromiso genuino con la
+        calidad de nuestros servicios.
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-2 grid-rows-2 shadow-lg w-full bg-white rounded-xl"
+    >
+      <article class="grid gap-x-2 border-r border-b p-5">
+        <div class="text-accent">
+          <svg
+            width="48"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M10.5 21h-4.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3"
+            ></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path
+              d="M4 11h10"></path><path
+              d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path
+              d="M18 16.5v1.5l.5 .5"></path></svg
+          >
+        </div>
+        <div class="content-center">
+          <h3 class="font-oswald font-bold text-xl text-primary">
+            Puntualidad en las entregas de trabajo.
+          </h3>
+        </div>
+        <div class="md:col-start-2 text-primary-900">
+          Cumplimos con cada entrega, garantizando resultados eficientes y en
+          los tiempos acordados.
+        </div>
+      </article>
+      <article class="grid gap-x-2 border-l border-b p-5">
+        <div class="text-accent">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M17.657 12.007a1.39 1.39 0 0 0 -1.103 .765l-.855 1.723l-1.907 .277c-.52 .072 -.96 .44 -1.124 .944l-.038 .14c-.1 .465 .046 .954 .393 1.29l1.377 1.337l-.326 1.892a1.393 1.393 0 0 0 2.018 1.465l1.708 -.895l1.708 .896a1.388 1.388 0 0 0 1.462 -.105l.112 -.09a1.39 1.39 0 0 0 .442 -1.272l-.325 -1.891l1.38 -1.339c.38 -.371 .516 -.924 .352 -1.427l-.051 -.134a1.39 1.39 0 0 0 -1.073 -.81l-1.907 -.278l-.853 -1.722a1.393 1.393 0 0 0 -1.247 -.773l-.143 .007z"
+            ></path><path
+              d="M6.057 12.007a1.39 1.39 0 0 0 -1.103 .765l-.855 1.723l-1.907 .277c-.52 .072 -.96 .44 -1.124 .944l-.038 .14c-.1 .465 .046 .954 .393 1.29l1.377 1.337l-.326 1.892a1.393 1.393 0 0 0 2.018 1.465l1.708 -.895l1.708 .896a1.388 1.388 0 0 0 1.462 -.105l.112 -.09a1.39 1.39 0 0 0 .442 -1.272l-.324 -1.891l1.38 -1.339c.38 -.371 .516 -.924 .352 -1.427l-.051 -.134a1.39 1.39 0 0 0 -1.073 -.81l-1.908 -.279l-.853 -1.722a1.393 1.393 0 0 0 -1.247 -.772l-.143 .007z"
+            ></path><path
+              d="M11.857 2.007a1.39 1.39 0 0 0 -1.103 .765l-.855 1.723l-1.907 .277c-.52 .072 -.96 .44 -1.124 .944l-.038 .14c-.1 .465 .046 .954 .393 1.29l1.377 1.337l-.326 1.892a1.393 1.393 0 0 0 2.018 1.465l1.708 -.894l1.709 .896a1.388 1.388 0 0 0 1.462 -.105l.112 -.09a1.39 1.39 0 0 0 .442 -1.272l-.325 -1.892l1.38 -1.339c.38 -.371 .516 -.924 .352 -1.427l-.051 -.134a1.39 1.39 0 0 0 -1.073 -.81l-1.908 -.279l-.853 -1.722a1.393 1.393 0 0 0 -1.247 -.772l-.143 .007z"
+            ></path></svg
+          >
+        </div>
+        <div class="content-center">
+          <h3 class="font-oswald font-bold text-xl text-primary">
+            Excelencia como Estándar
+          </h3>
+        </div>
+        <div class="md:col-start-2 text-primary-900">
+          Buscamos siempre la excelencia en nuestro trabajo para ofrecer
+          servicios de alta calidad.
+        </div>
+      </article>
+      <article class="grid gap-x-2 border-r border-t p-5">
+        <div class="text-accent">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M12.01 2.011a3.2 3.2 0 0 1 2.113 .797l.154 .145l.698 .698a1.2 1.2 0 0 0 .71 .341l.135 .008h1a3.2 3.2 0 0 1 3.195 3.018l.005 .182v1c0 .27 .092 .533 .258 .743l.09 .1l.697 .698a3.2 3.2 0 0 1 .147 4.382l-.145 .154l-.698 .698a1.2 1.2 0 0 0 -.341 .71l-.008 .135v1a3.2 3.2 0 0 1 -3.018 3.195l-.182 .005h-1a1.2 1.2 0 0 0 -.743 .258l-.1 .09l-.698 .697a3.2 3.2 0 0 1 -4.382 .147l-.154 -.145l-.698 -.698a1.2 1.2 0 0 0 -.71 -.341l-.135 -.008h-1a3.2 3.2 0 0 1 -3.195 -3.018l-.005 -.182v-1a1.2 1.2 0 0 0 -.258 -.743l-.09 -.1l-.697 -.698a3.2 3.2 0 0 1 -.147 -4.382l.145 -.154l.698 -.698a1.2 1.2 0 0 0 .341 -.71l.008 -.135v-1l.005 -.182a3.2 3.2 0 0 1 3.013 -3.013l.182 -.005h1a1.2 1.2 0 0 0 .743 -.258l.1 -.09l.698 -.697a3.2 3.2 0 0 1 2.269 -.944zm3.697 7.282a1 1 0 0 0 -1.414 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+            ></path></svg
+          >
+        </div>
+        <div class="content-center">
+          <h3 class="font-oswald font-bold text-xl text-primary">
+            Compromiso con Nuestro Entorno
+          </h3>
+        </div>
+        <div class="md:col-start-2 text-primary-900">
+          Nos responsabilizamos con clientes, proveedores, equipo, naturaleza y
+          sociedad en cada acción que realizamos.
+        </div>
+      </article>
+      <article class="grid gap-x-2 border-l border-t p-5">
+        <div class="text-accent">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+            ></path><path
+              d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"
+            ></path><path d="M12.5 15.5l2 2"></path><path d="M15 13l2 2"
+            ></path></svg
+          >
+        </div>
+        <div class="content-center">
+          <h3 class="font-oswald font-bold text-xl text-primary">
+            Integridad en Cada Relación
+          </h3>
+        </div>
+        <div class="md:col-start-2 text-primary-900">
+          Atendemos tanto a grandes empresas como a pequeños emprendedores con
+          confianza y transparencia.
+        </div>
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  main {
+    background-image: linear-gradient(120deg, #0754a4 0%, #d93033 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  }
+  @media (max-width: 1024px) {
+    main {
+      clip-path: polygon(0 0, 100% 0, 100% 98%, 50% 100%, 0 98%);
+    }
+  }
+</style>

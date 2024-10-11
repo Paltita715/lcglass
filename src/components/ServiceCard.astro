@@ -1,0 +1,55 @@
+---
+interface Feature {
+  title: string
+  description: string
+}
+
+interface Props {
+  title: string
+  description: string
+  features: Feature[]
+}
+
+const { title, description, features } = Astro.props
+---
+
+<article class="flex lg:flex-row flex-col gap-4 mb-32">
+  <div class="grid grid-cols-2 grid-rows-2 shadow-lg bg-white rounded-xl">
+    {
+      features.map((feature, index) => (
+        <article
+          class={`grid gap-x-2 p-2 ${
+            index === 0 ? "border-r border-b" : ""
+          } ${index === 1 ? "border-l border-b" : ""} ${
+            index === 2 ? "border-r border-t" : ""
+          } ${index === 3 ? "border-l border-t" : ""}`}
+        >
+          <div class="text-accent">
+            <svg
+              width="24"
+              height="100%"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
+            </svg>
+          </div>
+          <div class="content-center">
+            <h3 class="font-oswald font-bold text-xl text-primary">
+              {feature.title}
+            </h3>
+          </div>
+          <div class="md:col-start-2 text-primary-900">
+            {feature.description}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+  <div class="max-lg:order-first">
+    <h3 class="font-bold text-3xl font-oswald mb-8">{title}</h3>
+    <p class="mb-8">{description}</p>
+    <button class="bg-accent text-white py-2 px-4">Cotizar</button>
+  </div>
+</article>

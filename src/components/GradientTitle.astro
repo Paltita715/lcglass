@@ -1,0 +1,58 @@
+---
+interface Props {
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+  class?: string
+}
+
+const { as = "h2", class: customClass } = Astro.props
+---
+
+{
+  as === "h1" && (
+    <h1 class={`gradient-title ${customClass}`}>
+      <slot />
+    </h1>
+  )
+}
+{
+  as === "h2" && (
+    <h2 class={`gradient-title ${customClass}`}>
+      <slot />
+    </h2>
+  )
+}
+{
+  as === "h3" && (
+    <h3 class={`gradient-title ${customClass}`}>
+      <slot />
+    </h3>
+  )
+}
+{
+  as === "h4" && (
+    <h4 class={`gradient-title ${customClass}`}>
+      <slot />
+    </h4>
+  )
+}
+{
+  as === "h5" && (
+    <h5 class={`gradient-title ${customClass}`}>
+      <slot />
+    </h5>
+  )
+}
+{
+  as === "h6" && (
+    <h6 class={`gradient-title ${customClass}`}>
+      <slot />
+    </h6>
+  )
+}
+
+<style>
+  .gradient-title {
+    @apply font-oswald bg-gradient-to-tl from-primary to-accent bg-clip-text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

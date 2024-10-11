@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import GlassTitle from "../../components/GlassTitle.astro"
+import ServiceCard from "../../components/ServiceCard.astro"
+
+const services = [
+  {
+    title: "Puertas de duchas con cristal templado y acrílico",
+    description:
+      "Puertas de duchas modernas, diseñadas con cristales templados o acrílicos, brindando durabilidad, seguridad y un aspecto elegante en espacios de baño.",
+    features: [
+      {
+        title: "Durabilidad",
+        description:
+          "El cristal templado garantiza resistencia a golpes y temperaturas altas, manteniendo su calidad.",
+      },
+      {
+        title: "Seguridad",
+        description:
+          "Diseño sin bordes afilados para evitar accidentes y asegurar una experiencia segura.",
+      },
+      {
+        title: "Estética Personalizable",
+        description:
+          "Opciones en cristal transparente, mate o con diseños para adaptarse al estilo del baño.",
+      },
+      {
+        title: "Fácil Mantenimiento",
+        description:
+          "Materiales que facilitan la limpieza y resisten manchas y humedad.",
+      },
+    ],
+  },
+  {
+    title:
+      "Puertas de cristal templado o crudo con estructura de aluminio o accesorios modernos",
+    description:
+      "Puertas de cristal templado o crudo con estructura de aluminio, ideales para interiores y exteriores, combinando elegancia y resistencia.",
+    features: [
+      {
+        title: "Versatilidad",
+        description:
+          "Disponibles en varios estilos y diseños para adaptarse a diferentes tipos de espacios.",
+      },
+      {
+        title: "Resistencia al Clima",
+        description:
+          "El aluminio y el cristal templado soportan condiciones climáticas adversas.",
+      },
+      {
+        title: "Accesorios Modernos",
+        description:
+          "Incluye bisagras, manijas y sistemas de cierre de última tecnología.",
+      },
+      {
+        title: "Transparencia",
+        description:
+          "Permite aprovechar la luz natural y crear ambientes luminosos y abiertos.",
+      },
+    ],
+  },
+  {
+    title:
+      "Ventanas y mamparas en cristal templado (sistema corredizo, pivote)",
+    description:
+      "Ventanas y mamparas de cristal templado con sistemas corredizos y pivotantes, perfectas para espacios modernos que requieren optimización y estilo.",
+    features: [
+      {
+        title: "Sistemas Flexibles",
+        description:
+          "Disponibilidad de sistemas corredizos y pivotantes para maximizar la funcionalidad del espacio.",
+      },
+      {
+        title: "Resistencia Superior",
+        description:
+          "Cristales templados que soportan el uso continuo y la exposición ambiental.",
+      },
+      {
+        title: "Aislante de Sonido",
+        description:
+          "Ayuda a reducir el ruido exterior, mejorando el confort en interiores.",
+      },
+      {
+        title: "Fácil Instalación",
+        description:
+          "Diseñadas para una instalación rápida y adaptable a distintos entornos.",
+      },
+    ],
+  },
+  {
+    title: "Barandas con cristal templado y aluminio",
+    description:
+      "Barandas que combinan cristal templado y aluminio para ofrecer seguridad y una apariencia moderna en escaleras, balcones y terrazas.",
+    features: [
+      {
+        title: "Alta Seguridad",
+        description:
+          "Cristal templado resistente para evitar caídas y asegurar la protección de los usuarios.",
+      },
+      {
+        title: "Estilo Minimalista",
+        description:
+          "Diseño limpio y transparente que complementa cualquier arquitectura moderna.",
+      },
+      {
+        title: "Durabilidad",
+        description:
+          "Materiales que soportan uso intensivo y condiciones climáticas extremas sin perder su estética.",
+      },
+      {
+        title: "Personalización",
+        description:
+          "Posibilidad de elegir entre distintos tipos de acabados y colores en aluminio.",
+      },
+    ],
+  },
+]
+---
+
+<Layout title="Servicios">
+  <header class="pt-48 pb-24 px-4 text-center bg-primary">
+    <span class="text-white font-semibold text-2xl">Nuestros servicios</span>
+    <br />
+    <GlassTitle class="font-oswald font-bold text-5xl md:text-7xl uppercase">
+      desarrollamos las siguientes actvidades
+    </GlassTitle>
+  </header>
+  <main class="max-w-screen-lg mx-auto px-4">
+    {
+      services.map((service) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          features={service.features}
+        />
+      ))
+    }
+  </main>
+</Layout>

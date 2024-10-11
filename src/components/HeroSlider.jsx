@@ -6,7 +6,7 @@ const HeroSlider = () => {
     <Splide
       hasTrack={false}
       aria-label="Carrusel principal"
-      className="h-dvh w-full"
+      className="h-dvh w-full opacity-30"
       options={{
         type: "fade",
         rewind: true,

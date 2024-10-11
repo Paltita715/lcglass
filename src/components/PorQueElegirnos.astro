@@ -2,20 +2,48 @@
 import GlassButton from "./GlassButton.astro"
 import ItemList from "./ItemList.astro"
 ---
+
 <section class="relative w-full flex lg:h-[55rem] bg-primary">
   <div class="lg:basis-1/2 max-lg:absolute inset-0 max-lg:opacity-10">
-    <img src="/quienes-somos.jpeg" alt="trabajadores de lc glass y soluciones" class="h-full w-full object-cover" />
+    <img
+      src="/quienes-somos.jpeg"
+      alt="trabajadores de lc glass y soluciones"
+      class="h-full w-full object-cover"
+    />
   </div>
-  <article class="lg:basis-1/2 max-lg:gap-8 w-full text-secondary-100 px-10 py-6 xl:px-28 xl:py-16 flex flex-col justify-between relative">
-    <h2 class="font-oswald font-bold text-7xl text-center">¿Por qué elegirnos?</h2>
+  <article
+    class="lg:basis-1/2 max-lg:gap-8 w-full text-secondary-100 px-4 lg:px-10 py-6 xl:px-28 xl:py-16 flex flex-col justify-between relative"
+  >
+    <h2 class="font-oswald font-bold text-5xl lg:text-7xl text-center">
+      ¿Por qué elegirnos?
+    </h2>
     <ul class="flex flex-col gap-4 mx-auto">
-      <ItemList title="Experiencia" desc="Más de 6 años en el diseño y construcción con vidrio y cristales templados." />
-      <ItemList title="Calidad" desc="Garantía de calidad y responsabilidad en cada proyecto que ejecutamos." />
-      <ItemList title="Innovación" desc="Aplicamos tecnología de vanguardia en nuestros productos y servicios." />
-      <ItemList title="Satisfacción al cliente" desc="Comprometidos a superar las expectativas de nuestros clientes." />
-      <ItemList title="Variedad" desc="Ofrecemos soluciones completas en estructuras de vidrio." />
+      <ItemList
+        title="Experiencia"
+        desc="Más de 6 años en el diseño y construcción con vidrio y cristales templados."
+      />
+      <ItemList
+        title="Calidad"
+        desc="Garantía de calidad y responsabilidad en cada proyecto que ejecutamos."
+      />
+      <ItemList
+        title="Innovación"
+        desc="Aplicamos tecnología de vanguardia en nuestros productos y servicios."
+      />
+      <ItemList
+        title="Satisfacción al cliente"
+        desc="Comprometidos a superar las expectativas de nuestros clientes."
+      />
+      <ItemList
+        title="Variedad"
+        desc="Ofrecemos soluciones completas en estructuras de vidrio."
+      />
     </ul>
-    <GlassButton anchor href="/nosotros" class="mx-auto block px-4 py-2 text-2xl uppercase font-bold">
+    <GlassButton
+      anchor
+      href="/nosotros"
+      class="mx-auto block px-4 py-2 text-2xl uppercase font-bold"
+    >
       Conócenos más
     </GlassButton>
   </article>

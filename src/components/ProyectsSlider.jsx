@@ -1,12 +1,11 @@
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide"
-import "@splidejs/react-splide/css"
 
 const ProyectsSlider = () => {
   return (
     <Splide
       hasTrack={false}
       aria-label="Carrusel de proyectos"
-      className="basis-1/2"
+      className="lg:basis-1/2 w-full h-[30rem] lg:h-full"
       options={{
         type: "fade",
         pagination: false,
