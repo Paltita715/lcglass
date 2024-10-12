@@ -18,33 +18,7 @@ import EmailForm from "../components/EmailForm"
       ¡Estamos listos para asistirte!
     </p>
     <section class="grid grid-cols-1 lg:grid-cols-3">
-      <!-- <EmailForm client:load /> -->
-      <form class="col-span-2 sm:grid grid-cols-2 p-4 rounded-xl gap-2">
-        <div>
-          <label for="">Nombre</label>
-          <input type="text" placeholder="Luis Zabaleta Pacora" />
-        </div>
-        <div>
-          <label for="">Telefono</label>
-          <input type="tel" placeholder="936 036 026" />
-        </div>
-        <div>
-          <label for="">Correo</label>
-          <input type="text" placeholder="nombre@ejemplo.com" />
-        </div>
-        <div>
-          <label for="">Asunto</label>
-          <input type="text" />
-        </div>
-        <div class="col-span-2">
-          <label for="">Comentario</label>
-          <textarea class="min-h-52" name="" id=""></textarea>
-        </div>
-        <button
-          class="bg-primary col-span-2 w-fit px-4 py-2 text-white rounded text-xl ml-auto"
-          type="submit">Enviar</button
-        >
-      </form>
+      <EmailForm client:load />
       <aside class="flex flex-col gap-4 justify-center">
         <article>
           <h3>
@@ -103,19 +77,19 @@ import EmailForm from "../components/EmailForm"
     </section>
     <hr />
     <section>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243.72640687897828!2d-76.97028349027687!3d-12.20606900603407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1728700333577!5m2!1ses!2spe" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243.72640687897828!2d-76.97028349027687!3d-12.20606900603407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1728700333577!5m2!1ses!2spe"
+        width="100%"
+        height="500"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 </Layout>
 
 <style>
-  label {
-    @apply block font-semibold;
-  }
-  input,
-  textarea {
-    @apply w-full placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease-linear focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow;
-  }
   article {
     @apply bg-white border rounded-2xl p-4 text-center;
     & h3 {
