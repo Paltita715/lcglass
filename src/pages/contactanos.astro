@@ -1,6 +1,7 @@
 ---
 import GradientTitle from "../components/GradientTitle.astro"
 import Layout from "../layouts/Layout.astro"
+import EmailForm from "../components/EmailForm"
 ---
 
 <Layout
@@ -17,6 +18,7 @@ import Layout from "../layouts/Layout.astro"
       ¡Estamos listos para asistirte!
     </p>
     <section class="grid grid-cols-1 lg:grid-cols-3">
+      <!-- <EmailForm client:load /> -->
       <form class="col-span-2 sm:grid grid-cols-2 p-4 rounded-xl gap-2">
         <div>
           <label for="">Nombre</label>
@@ -59,8 +61,8 @@ import Layout from "../layouts/Layout.astro"
             Visitanos
           </h3>
           <p>
-            Lima, Villa el Salvador <br /> Asoc. California II Etapa <br /> Mz H1
-            Lote 14
+            Lima, Villa el Salvador <br /> Asoc. Viv. California II Etapa
+            <br /> Mz H Lote 14
           </p>
         </article>
         <article>
@@ -95,7 +97,7 @@ import Layout from "../layouts/Layout.astro"
             >
             Celular
           </h3>
-          <p>+ 943 264 873</p>
+          <p>+ 998 267 385</p>
         </article>
       </aside>
     </section>
