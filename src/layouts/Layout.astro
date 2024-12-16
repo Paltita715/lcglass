@@ -1,9 +1,8 @@
 ---
-import { ViewTransitions } from "astro:transitions"
+import { ClientRouter } from "astro:transitions"
 import NavBar from "../components/NavBar.astro"
 import Footer from "../components/Footer.astro"
 import WhatsappButton from "../components/WhatsappButton.astro"
-import SpeedInsights from "@vercel/speed-insights/astro"
 
 interface Props {
   title: string
@@ -21,8 +20,7 @@ const { title, description } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>lc glass y soluciones | {title}</title>
-    <!-- <SpeedInsights /> -->
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <NavBar />
